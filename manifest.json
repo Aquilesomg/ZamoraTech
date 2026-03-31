@@ -1,0 +1,24 @@
+{
+    "name": "Zamora Tech Guinea Ecuatorial",
+    "short_name": "Zamora Tech",
+    "description": "Noticias tecnológicas desde el corazón de África Hispanohablante.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "display_override": ["window-controls-overlay", "standalone"],
+    "background_color": "#06090c",
+    "theme_color": "#3191ff",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

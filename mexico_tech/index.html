@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexico Tech | Innovación & Futuro</title>
+    <meta name="description" content="Las últimas noticias de tecnología, startups y ciencia en México.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-dot"></span>
+            <h1>Mexico<span>Tech</span></h1>
+        </div>
+        <div class="searchbox">
+            <input type="text" id="query" placeholder="Buscar tecnología en México...">
+            <button id="search-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <nav class="filters">
+        <button class="filter-btn active" data-category="general">Todo</button>
+        <button class="filter-btn" data-category="science">Ciencia</button>
+        <button class="filter-btn" data-category="business">Startups</button>
+        <button class="filter-btn" data-category="tech">Hardware</button>
+    </nav>
+
+    <section class="advanced-filters">
+        <div class="filter-group">
+            <label for="lang-select">Idioma:</label>
+            <select id="lang-select">
+                <option value="es" selected>Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="date-select">Desde:</label>
+            <input type="date" id="date-select">
+        </div>
+        <button id="apply-filters" class="apply-btn">Refinar</button>
+    </section>
+
+    <main class="main-content">
+        <div class="status-bar">
+            <h2 id="view-title">Lo más reciente</h2>
+            <div id="loader" class="loader hidden"></div>
+        </div>
+
+        <section id="news-grid" class="news-grid">
+            <!-- Dynamic items -->
+        </section>
+
+        <footer class="pagination" id="pagination" style="display: none;">
+            <button id="prev" class="btn-pager">Anterior</button>
+            <span id="page-num">1</span>
+            <button id="next" class="btn-pager">Siguiente</button>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

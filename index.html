@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamora Tech | Guinea Ecuatorial</title>
+    <meta name="description" content="Noticias tecnológicas de Guinea Ecuatorial y el mundo.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3191ff">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="logo">
+            <span class="logo-icon"></span>
+            <h1>Zamora<span>Tech</span></h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Explorar tecnología...">
+            <button id="search-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <button class="nav-item active" data-view="tech">Tecnología G.E.</button>
+        <button class="nav-item" data-view="ai">IA & Futuro</button>
+        <button class="nav-item" data-view="gadgets">Gadgets</button>
+        <button class="nav-item" data-view="cyber">Ciberseguridad</button>
+        <button class="nav-item" data-view="crypto">Web3 & Crypto</button>
+    </nav>
+
+    <section class="advanced-filters">
+        <div class="filter-group">
+            <label for="lang-select">Idioma:</label>
+            <select id="lang-select">
+                <option value="es" selected>Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="date-select">Desde:</label>
+            <input type="date" id="date-select">
+        </div>
+        <button id="apply-filters" class="apply-btn">Refinar Resultados</button>
+    </section>
+
+    <main class="container">
+        <div class="view-header">
+            <h2 id="current-view-title">Innovación en Guinea Ecuatorial</h2>
+            <div id="loading-indicator" class="hidden">
+                <div class="glow-spinner"></div>
+            </div>
+        </div>
+
+        <section id="results-container" class="results-grid">
+            <!-- News will be dynamically loaded -->
+        </section>
+
+        <div class="pagination" id="pagination-controls" style="display: none;">
+            <button id="prev-btn" class="pagination-btn">Anterior</button>
+            <span id="page-info">Página 1</span>
+            <button id="next-btn" class="pagination-btn">Siguiente</button>
+        </div>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

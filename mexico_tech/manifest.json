@@ -1,0 +1,24 @@
+{
+    "name": "Mexico Tech Innovación",
+    "short_name": "MexicoTech",
+    "description": "Noticias tecnológicas, startups y ciencia desde México.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "display_override": ["window-controls-overlay", "standalone"],
+    "background_color": "#ffffff",
+    "theme_color": "#0984e3",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
